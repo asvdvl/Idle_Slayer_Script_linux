@@ -1,8 +1,8 @@
 # How to make it run?
 
-(Works only with the Steam Version on Windows)
+(Works only with the Steam Version on Windows & linux(partly))
 
-You have two options:
+You have three options:
 
 1) **Run with _.exe files** (easy):
 
@@ -17,6 +17,41 @@ You have two options:
     When Autoit is installed right-click the file `Idle Runner.au3` and click the option `Compile with Options` in the menu click `Compile Script`.
     It will generate .exe file which you can run.
 
+3) **Run on linux**
+
+    Firstly, I must immediately say that not everything works, but for me personally the functionality is enough:
+    - chest hunt
+    - auto ascend (useless due to non-working auto upgrades)
+
+    What doesn't work and is critical:
+    - jumping (use external bash script)
+    - bonus level (for a fix, I bought a vertical magnet for a special random box)
+
+    Installation:
+    - We will use [protonhax](https://github.com/jcnils/protonhax) to run programs within the proton environment.
+      
+      For Arch linux/Manjaro:      
+      `yay -S protonhax`
+      If you don't have yay, install from the repositories:
+      `sudo pacman -S yay`
+
+      If your system package manager is not pacman then go to the protonhax repository and follow the installation section
+
+    - Go to the game properties on Steam and set the game launch options to `protonhax init %COMMAND%`
+    - If you did everything correctly, then after you start the game, the `protonhax ls` command should give the following result:
+      ```
+        > protonhax ls
+        1353300
+      ```
+    - Download the exe file from the releases page and put it where you like best (the script will create a folder for its work next to the launch file, keep this in mind), for me this is my home directory `~/Idle.Runner_x64.exe`
+    - Finally, you can run the script:
+      ```
+      protonhax run 1353300 ~/Idle.Runner_x64.exe
+      ```
+
+    If you decide to try to compile the script, the instructions remain the same(except that after installing autoit you will either have to find where the program is on the host machine or use `protonhax cmd 1353300` and run from there),
+    I personally have a problem with displaying the GUI in proton and in windows
+    
 # Important Options
 
 ### The script will ***ONLY*** work with the following options:
