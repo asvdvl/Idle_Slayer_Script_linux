@@ -43,7 +43,7 @@ You have three options:
         > protonhax ls
         1353300
       ```
-    - Download the exe file from the releases page and put it where you like best (the script will create a folder for its work next to the launch file, keep this in mind), for me this is my home directory `~/Idle.Runner_x64.exe`
+    - Download the exe file from the [Github Releases](https://github.com/Devil4ngle/Idle_Slayer_Script/releases) page and put it where you like best (the script will create a folder for its work next to the launch file, keep this in mind), for me this is my home directory `~/Idle.Runner_x64.exe`
     - Finally, you can run the script:
       ```
       protonhax run 1353300 ~/Idle.Runner_x64.exe
